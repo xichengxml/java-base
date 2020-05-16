@@ -32,11 +32,11 @@ public class AutoIdempotentInterceptor implements HandlerInterceptor {
             TokenService tokenService = SpringApplicationContext.getBean(TokenService.class);
             boolean result = tokenService.checkToken(request);
             if (result) {
-                writeReturnJson(response, "重复请求");
-            } else {
                 writeReturnJson(response, "请求成功");
+            } else {
+                writeReturnJson(response, "重复请求");
             }
-            return !result;
+            return result;
         }
         return true;
     }

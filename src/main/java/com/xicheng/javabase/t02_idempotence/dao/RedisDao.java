@@ -39,4 +39,10 @@ public class RedisDao {
         jedis.setex(key, expireTime, value);
         jedis.close();
     }
+
+    public void delete(final String key) {
+        createClient();
+        jedis.del(key);
+        jedis.close();
+    }
 }

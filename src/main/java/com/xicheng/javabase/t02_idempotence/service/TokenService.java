@@ -26,10 +26,15 @@ public class TokenService {
     public String createToken() {
         UUID uuid = UUID.randomUUID();
         String token = String.format(TokenConstant.TOKEN_PREFIX, uuid);
-        redisDao.setEx(token, token, 60);
+        redisDao.set(token, token);
         return token;
     }
 
+    /**
+     * 为空，返回false; 否则校验token
+     * @param request
+     * @return
+     */
     public boolean checkToken(HttpServletRequest request) {
         String token = request.getHeader(TokenConstant.TOKEN_NAME);
         if (StringUtils.isBlank(token)) {
@@ -37,7 +42,11 @@ public class TokenService {
         }
         if (StringUtils.isNotBlank(token)) {
             Object redisToken = redisDao.get(token);
-            return token.equals(redisToken);
+            boolean equals = token.equals(redisToken);
+            if (equals) {
+                redisDao.delete(token);
+                return true;
+            }
         }
         return false;
     }
