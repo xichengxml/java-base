@@ -3,6 +3,7 @@ package com.xicheng.javabase.t02_idempotence.config;
 import com.xicheng.javabase.t02_idempotence.interceptor.AutoIdempotentInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
@@ -19,5 +20,8 @@ public class WebConfiguration implements WebMvcConfigurer {
         registry.addInterceptor(new AutoIdempotentInterceptor()).addPathPatterns();
     }
 
-
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/").setViewName("index");
+    }
 }
