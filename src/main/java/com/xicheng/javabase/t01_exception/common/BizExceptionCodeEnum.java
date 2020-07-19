@@ -23,7 +23,7 @@ public enum BizExceptionCodeEnum implements ResponseCodeBase {
 
 	private String cnName;
 
-	private BizExceptionCodeEnum(String code, String cnName) {
+	BizExceptionCodeEnum(String code, String cnName) {
 		this.code = code;
 		this.cnName = cnName;
 	}
