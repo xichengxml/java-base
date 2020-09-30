@@ -16,4 +16,9 @@ public class M {
         super.finalize();
         log.info("object m is collected by jvm: {}", this);
     }
+
+    @Override
+    public String toString() {
+        return "M{}";
+    }
 }
