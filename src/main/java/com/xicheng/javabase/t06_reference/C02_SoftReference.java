@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
  * description 软引用--适合缓存使用
  * jvm参数: -Xmx20M -XX:+PrintGC
  * 执行失败，没想明白原因；使用log会造成内存溢出
+ * 最大堆内存调整成30M是可以成功的，jdk1.7和jdk1.8都是如此，从gc日志可以看到是回收了的；内存20M也是可以看到gc回收日志，但是分配内存失败
  * @author xichengxml
  * @date 2020-09-28 23:51
  */
