@@ -12,7 +12,8 @@ public class LogUtil {
 
     public static void info(Logger log, String logFormat, Object... messages) {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(log.getName()).append(" main ").append(logFormat);
+        String className = log.getName().substring(log.getName().lastIndexOf(".") + 1);
+        stringBuilder.append(className).append(" main ").append(logFormat);
         log.info(stringBuilder.toString(), messages);
     }
 }
