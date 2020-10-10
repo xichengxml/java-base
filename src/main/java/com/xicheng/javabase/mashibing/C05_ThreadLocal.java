@@ -1,7 +1,7 @@
-package com.xicheng.javabase.t06_reference;
+package com.xicheng.javabase.mashibing;
 
 import com.xicheng.javabase.common.LogUtil;
-import com.xicheng.javabase.t06_reference.common.M;
+import com.xicheng.javabase.mashibing.common.M;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.TimeUnit;

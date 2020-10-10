@@ -1,8 +1,7 @@
-package com.xicheng.javabase.t06_reference;
+package com.xicheng.javabase.mashibing;
 
 import com.alibaba.fastjson.JSON;
-import com.xicheng.javabase.t06_reference.common.M;
-import jdk.nashorn.internal.runtime.JSONFunctions;
+import com.xicheng.javabase.mashibing.common.M;
 import lombok.extern.slf4j.Slf4j;
 
 import java.lang.ref.PhantomReference;

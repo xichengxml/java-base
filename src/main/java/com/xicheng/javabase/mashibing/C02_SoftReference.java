@@ -1,4 +1,4 @@
-package com.xicheng.javabase.t06_reference;
+package com.xicheng.javabase.mashibing;
 
 import lombok.extern.slf4j.Slf4j;
 
