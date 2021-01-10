@@ -12,7 +12,7 @@ import java.util.List;
  * @author xichengxml
  * @date 2021-01-09 07:14
  */
-public class C01_Comparable {
+public class C001_Comparable {
 
     public static void main(String[] args) {
         List<Movie> movieList = new ArrayList<>();

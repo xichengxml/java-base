@@ -15,7 +15,7 @@ import java.util.List;
  * @author xichengxml
  * @date 2021-01-09 07:33
  */
-public class C02_Comparator {
+public class C002_Comparator {
 
     public static void main(String[] args) {
         List<DefaultCompare> movieList = new ArrayList<>();
